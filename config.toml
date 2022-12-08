@@ -1,0 +1,7 @@
+baseURL = 'https://today.comptr.land/'
+languageCode = 'en-us'
+title = 'Today in Computerland'
+SectionPagesMenu = 'main'
+theme = 'micro'
+[params]
+  RSSSections = [ "Microposts" ]

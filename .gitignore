@@ -1,0 +1,10 @@
+debug.log
+
+### Hugo ###
+/public/
+/resources/_gen/
+hugo_stats.json
+
+### vscode ###
+.vscode
+*.code-workspace
