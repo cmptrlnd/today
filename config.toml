@@ -1,4 +1,4 @@
-baseURL = 'https://today.comptr.land/'
+baseURL = 'https://today.cmptr.land/'
 languageCode = 'en-us'
 title = 'Today in Computerland'
 SectionPagesMenu = 'main'
