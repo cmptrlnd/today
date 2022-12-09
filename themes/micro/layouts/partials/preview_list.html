@@ -1,0 +1,16 @@
+
+{{ $pages := .Pages }}
+{{ if .IsHome }}
+{{ $pages = .Site.RegularPages }}
+{{ end }}
+{{ $paginator := .Paginate $pages }}
+
+{{ range .Paginator.Pages }}
+  {{ $url := replace .Permalink .Site.BaseURL "" }}
+
+  {{ if or (eq .Type "microposts") (eq .Type "micropost") }}
+    {{ partial "preview_micropost.html" . }}
+  {{ end }}
+{{ end }}
+
+{{ partial "pagination.html" . }}

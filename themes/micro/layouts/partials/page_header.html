@@ -1,0 +1,28 @@
+<header>
+  <nav>
+    <h1><a href="/">{{ .Site.Title }}.</h1>
+    <div class="menu">
+		{{ if isset .Site.Params "rsssections" }}
+			{{ $.Scratch.Add "sections" .Site.Params.rsssections }}
+			<ul>
+				{{ range .Site.Menus.main }}
+				<li>
+					<a href="{{.URL}}">{{ .Name }}</a>
+					{{ if in ($.Scratch.Get "sections") .Name }}
+					<a href="{{.URL}}index.xml"><i class="fa-solid fa-rss"></i></a>
+					{{ end }}
+				</li>
+				{{ end }}
+			</ul>
+		{{ else }}
+			<ul>
+				{{ range .Site.Menus.main }}
+				<li>
+					<a href="{{.URL}}">{{ .Name }}</a>
+				</li>
+				{{ end }}
+			</ul>
+      	{{ end }}
+    </div>
+  </nav>
+</header>
